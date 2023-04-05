@@ -1,4 +1,5 @@
 print("Welcome to the decomposition time calculator for the most popular garbage!")
+print("")
 
 decomposition_times = {
     "plastic bottle": 500,
@@ -12,6 +13,7 @@ decomposition_times = {
 
 item = input("What item was thrown away (plastic bottle, aluminum can, plastic bag, milk carton, glass bottle, "
              "tire, cigarette)? ")
+print("")
 
 if item in decomposition_times:
     decomposition_time = decomposition_times[item]
@@ -19,11 +21,14 @@ if item in decomposition_times:
     years_have_passed = 2023 - garbage_year
 
     if (garbage_year + decomposition_time) <= 2023:
+        print("")
         print("The item has already decomposed.")
     else:
         decomposition_percent = years_have_passed / decomposition_time * 100
+        print("")
         print("The average decomposition time for an item named", item, "is", decomposition_time, "years.")
         print("About", decomposition_percent, "% of the decomposition time has already passed.")
         print(item, "should finally decompose by", garbage_year + decomposition_time, ".")
 else:
+    print("")
     print("No data on decomposition.")
